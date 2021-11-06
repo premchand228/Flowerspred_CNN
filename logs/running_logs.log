@@ -1,0 +1,610 @@
+[2021-10-29 19:04:56,633: INFO: stage_01_load_save]: >>>>> stage one started
+[2021-10-29 19:04:56,644: ERROR: stage_01_load_save]: while parsing a block collection
+  in "config/config.yaml", line 6, column 3
+expected <block end>, but found '?'
+  in "config/config.yaml", line 13, column 3
+Traceback (most recent call last):
+  File "src/stage_01_load_save.py", line 34, in <module>
+    get_data(config_path=parsed_args.config)
+  File "src/stage_01_load_save.py", line 15, in get_data
+    config=read_yaml(config_path)
+  File "d:\datascience\aimlops\dataversioncontrol\flowers_prediction\src\utils\all_utils.py", line 9, in read_yaml
+    content=yaml.safe_load(yaml_file)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\yaml\composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\yaml\composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\yaml\composer.py", line 110, in compose_sequence_node
+    while not self.check_event(SequenceEndEvent):
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\yaml\parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\yaml\parser.py", line 393, in parse_block_sequence_entry
+    "expected <block end>, but found %r" % token.id, token.start_mark)
+yaml.parser.ParserError: while parsing a block collection
+  in "config/config.yaml", line 6, column 3
+expected <block end>, but found '?'
+  in "config/config.yaml", line 13, column 3
+[2021-10-29 19:05:32,000: INFO: stage_01_load_save]: >>>>> stage one started
+[2021-10-29 19:05:32,011: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-29 19:05:32,011: ERROR: stage_01_load_save]: 'module' object is not callable
+Traceback (most recent call last):
+  File "src/stage_01_load_save.py", line 34, in <module>
+    get_data(config_path=parsed_args.config)
+  File "src/stage_01_load_save.py", line 19, in get_data
+    for source_download_dir,local_data_dir in tqdm(zip(source_download_dirs,local_data_dirs),total=2,desc="list of folders",colour='red'):
+TypeError: 'module' object is not callable
+[2021-10-29 19:07:32,614: INFO: stage_01_load_save]: >>>>> stage one started
+[2021-10-29 19:07:32,616: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-29 19:07:32,641: INFO: all_utils]: directory is created at data/daisy
+[2021-10-29 19:07:32,641: INFO: all_utils]: directory is created at data/dandelion
+[2021-10-29 19:07:32,641: INFO: all_utils]: directory is created at data/rose
+[2021-10-29 19:07:32,643: INFO: all_utils]: directory is created at data/sunflower
+[2021-10-29 19:07:32,643: INFO: all_utils]: directory is created at data/tulip
+[2021-10-29 19:07:32,643: INFO: stage_01_load_save]: stage one completed! all the data are saved in local >>>>>
+[2021-10-29 19:31:26,031: INFO: stage_01_load_save]: >>>>> stage one started
+[2021-10-29 19:31:26,037: INFO: all_utils]: yaml file: config/config.yaml loaded successfully
+[2021-10-29 19:31:26,048: INFO: all_utils]: directory is created at data/daisy
+[2021-10-29 19:31:26,048: INFO: all_utils]: directory is created at data/dandelion
+[2021-10-29 19:31:26,048: INFO: all_utils]: directory is created at data/rose
+[2021-10-29 19:31:26,048: INFO: all_utils]: directory is created at data/sunflower
+[2021-10-29 19:31:26,048: INFO: all_utils]: directory is created at data/tulip
+[2021-10-29 19:31:26,049: INFO: stage_01_load_save]: stage one completed! all the data are saved in local >>>>>
+[2021-10-29 19:31:59,788: INFO: stage_01_load_save]: >>>>> stage one started
+[2021-10-29 19:31:59,789: INFO: all_utils]: yaml file: config/config.yaml loaded successfully
+[2021-10-29 19:31:59,797: INFO: all_utils]: directory is created at data/daisy
+[2021-10-29 19:32:06,120: INFO: all_utils]: directory is created at data/dandelion
+[2021-10-29 19:32:14,027: INFO: all_utils]: directory is created at data/rose
+[2021-10-29 19:32:20,382: INFO: all_utils]: directory is created at data/sunflower
+[2021-10-29 19:32:27,011: INFO: all_utils]: directory is created at data/tulip
+[2021-10-29 19:32:35,516: INFO: stage_01_load_save]: stage one completed! all the data are saved in local >>>>>
+[2021-10-30 20:42:17,109: INFO: stage_02_update_model]: >>>>> stage two started
+[2021-10-30 20:42:17,153: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-30 20:42:17,156: INFO: all_utils]: yaml file: params.yaml loaded sucessfully 
+[2021-10-30 20:42:17,171: INFO: all_utils]: directory is created at artifacts\base_model
+[2021-10-30 20:42:18,107: WARNING: saving_utils]: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2021-10-30 20:42:18,204: INFO: models]:  VGG16 model is saved at artifacts\base_model\VGG16_base_model.h5
+[2021-10-30 20:42:18,214: ERROR: stage_02_update_model]: ('Keyword argument not understood:', 'input')
+Traceback (most recent call last):
+  File "src/stage_02_update_model.py", line 46, in <module>
+    prepare_base_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_update_model.py", line 26, in prepare_base_model
+    full_model=prepare_model(model,CLASSES=params["CLASSES"],Freeze_all=True,Freeze_till=None,learning_rate=params["LEARNING_RATE"])
+  File "d:\datascience\aimlops\dataversioncontrol\flowers_prediction\src\utils\models.py", line 24, in prepare_model
+    full_model=tf.keras.models.Model(input=model.input,outputs=prediction)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\training\tracking\base.py", line 530, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\keras\engine\training.py", line 239, in __init__
+    'trainable', 'dtype', 'dynamic', 'name', 'autocast', 'inputs', 'outputs'
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\keras\utils\generic_utils.py", line 1143, in validate_kwargs
+    raise TypeError(error_message, kwarg)
+TypeError: ('Keyword argument not understood:', 'input')
+[2021-10-30 20:44:08,007: INFO: stage_02_update_model]: >>>>> stage two started
+[2021-10-30 20:44:08,008: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-30 20:44:08,009: INFO: all_utils]: yaml file: params.yaml loaded sucessfully 
+[2021-10-30 20:44:08,009: INFO: all_utils]: directory is created at artifacts\base_model
+[2021-10-30 20:44:08,613: WARNING: saving_utils]: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2021-10-30 20:44:08,702: INFO: models]:  VGG16 model is saved at artifacts\base_model\VGG16_base_model.h5
+[2021-10-30 20:44:08,730: INFO: models]: custom model is compiled and ready to be trained
+[2021-10-30 20:44:08,745: INFO: stage_02_update_model]: full model summary: 
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 224, 224, 3)]     0         
+_________________________________________________________________
+block1_conv1 (Conv2D)        (None, 224, 224, 64)      1792      
+_________________________________________________________________
+block1_conv2 (Conv2D)        (None, 224, 224, 64)      36928     
+_________________________________________________________________
+block1_pool (MaxPooling2D)   (None, 112, 112, 64)      0         
+_________________________________________________________________
+block2_conv1 (Conv2D)        (None, 112, 112, 128)     73856     
+_________________________________________________________________
+block2_conv2 (Conv2D)        (None, 112, 112, 128)     147584    
+_________________________________________________________________
+block2_pool (MaxPooling2D)   (None, 56, 56, 128)       0         
+_________________________________________________________________
+block3_conv1 (Conv2D)        (None, 56, 56, 256)       295168    
+_________________________________________________________________
+block3_conv2 (Conv2D)        (None, 56, 56, 256)       590080    
+_________________________________________________________________
+block3_conv3 (Conv2D)        (None, 56, 56, 256)       590080    
+_________________________________________________________________
+block3_pool (MaxPooling2D)   (None, 28, 28, 256)       0         
+_________________________________________________________________
+block4_conv1 (Conv2D)        (None, 28, 28, 512)       1180160   
+_________________________________________________________________
+block4_conv2 (Conv2D)        (None, 28, 28, 512)       2359808   
+_________________________________________________________________
+block4_conv3 (Conv2D)        (None, 28, 28, 512)       2359808   
+_________________________________________________________________
+block4_pool (MaxPooling2D)   (None, 14, 14, 512)       0         
+_________________________________________________________________
+block5_conv1 (Conv2D)        (None, 14, 14, 512)       2359808   
+_________________________________________________________________
+block5_conv2 (Conv2D)        (None, 14, 14, 512)       2359808   
+_________________________________________________________________
+block5_conv3 (Conv2D)        (None, 14, 14, 512)       2359808   
+_________________________________________________________________
+block5_pool (MaxPooling2D)   (None, 7, 7, 512)         0         
+_________________________________________________________________
+flatten (Flatten)            (None, 25088)             0         
+_________________________________________________________________
+dense (Dense)                (None, 2)                 50178     
+=================================================================
+Total params: 14,764,866
+Trainable params: 50,178
+Non-trainable params: 14,714,688
+_________________________________________________________________
+
+[2021-10-30 20:44:08,826: INFO: stage_02_update_model]: stage two completed! base model is created >>>>>
+[2021-10-30 20:48:21,756: INFO: test]: >>>>> stage three started
+[2021-10-30 20:48:21,758: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-30 20:48:21,759: INFO: all_utils]: yaml file: params.yaml loaded sucessfully 
+[2021-10-30 20:48:21,760: INFO: all_utils]: directory is created at artifacts\tensorboard_log_dir
+[2021-10-30 20:48:21,760: INFO: all_utils]: directory is created at artifacts\checkpoint_dir
+[2021-10-30 20:48:21,760: INFO: all_utils]: directory is created at artifacts\callbacks
+[2021-10-30 20:48:22,073: INFO: callbacks]: Tensor board logs are saved at artifacts\callbacks\tensorboard_cb.cb
+[2021-10-30 20:48:22,076: INFO: callbacks]: Check point call backs are saved at artifacts\callbacks\checkpoint_cb.cb
+[2021-10-30 20:48:22,076: INFO: test]: stage three completed! callbacks are prepared and saved as binary>>>>>
+[2021-10-30 20:49:00,643: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 20:49:00,645: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-30 20:49:00,646: INFO: all_utils]: yaml file: params.yaml loaded sucessfully 
+[2021-10-30 20:49:00,646: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 20:49:01,178: INFO: models]: untrained full model is read from <keras.engine.functional.Functional object at 0x0000021E822EDC88>
+[2021-10-30 20:49:01,198: INFO: callbacks]: saved callbacks are loaded from artifacts\callbacks
+[2021-10-30 20:49:01,306: INFO: data_management]: data augmentation is used for training
+[2021-10-30 20:49:01,564: INFO: data_management]: train and valid generator is created.
+[2021-10-30 20:49:05,331: ERROR: stage_04_train]:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:49) ]] [Op:__inference_train_function_1143]
+
+Function call stack:
+train_function
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 71, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 49, in train_model
+    callbacks=callbacks
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 950, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 3040, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 1964, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 596, in call
+    ctx=ctx)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.InvalidArgumentError:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:49) ]] [Op:__inference_train_function_1143]
+
+Function call stack:
+train_function
+
+[2021-10-30 20:50:03,292: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 20:50:03,294: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-30 20:50:03,295: INFO: all_utils]: yaml file: params.yaml loaded sucessfully 
+[2021-10-30 20:50:03,295: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 20:50:03,796: INFO: models]: untrained full model is read from <keras.engine.functional.Functional object at 0x000002EF44D6A400>
+[2021-10-30 20:50:03,796: INFO: callbacks]: saved callbacks are loaded from artifacts\callbacks
+[2021-10-30 20:50:03,910: INFO: data_management]: data augmentation is used for training
+[2021-10-30 20:50:04,035: INFO: data_management]: train and valid generator is created.
+[2021-10-30 20:50:07,146: ERROR: stage_04_train]:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:49) ]] [Op:__inference_train_function_1143]
+
+Function call stack:
+train_function
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 71, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 49, in train_model
+    callbacks=callbacks
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 950, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 3040, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 1964, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 596, in call
+    ctx=ctx)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.InvalidArgumentError:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:49) ]] [Op:__inference_train_function_1143]
+
+Function call stack:
+train_function
+
+[2021-10-30 20:53:48,559: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 20:53:48,561: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-30 20:53:48,562: INFO: all_utils]: yaml file: params.yaml loaded sucessfully 
+[2021-10-30 20:53:48,562: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 20:53:49,057: INFO: models]: untrained full model is read from <keras.engine.functional.Functional object at 0x0000022766817240>
+[2021-10-30 20:53:49,181: INFO: data_management]: data augmentation is used for training
+[2021-10-30 20:53:49,307: INFO: data_management]: train and valid generator is created.
+[2021-10-30 20:53:52,283: ERROR: stage_04_train]:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:48) ]] [Op:__inference_train_function_1129]
+
+Function call stack:
+train_function
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 70, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 48, in train_model
+    validation_steps=validation_steps
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 950, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 3040, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 1964, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 596, in call
+    ctx=ctx)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.InvalidArgumentError:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:48) ]] [Op:__inference_train_function_1129]
+
+Function call stack:
+train_function
+
+[2021-10-30 21:00:27,625: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 21:00:27,642: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-30 21:00:27,658: INFO: all_utils]: yaml file: params.yaml loaded sucessfully 
+[2021-10-30 21:00:27,658: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 21:00:29,464: INFO: models]: untrained full model is read from <keras.engine.functional.Functional object at 0x000001E184D2BC88>
+[2021-10-30 21:00:29,578: INFO: data_management]: data augmentation is NOT used for training
+[2021-10-30 21:00:29,820: INFO: data_management]: train and valid generator is created.
+[2021-10-30 21:00:33,442: ERROR: stage_04_train]:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:48) ]] [Op:__inference_train_function_1129]
+
+Function call stack:
+train_function
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 70, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 48, in train_model
+    validation_steps=validation_steps
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 950, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 3040, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 1964, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 596, in call
+    ctx=ctx)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.InvalidArgumentError:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:48) ]] [Op:__inference_train_function_1129]
+
+Function call stack:
+train_function
+
+[2021-10-30 21:12:11,623: INFO: test]: >>>>> stage three started
+[2021-10-30 21:12:11,631: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-30 21:12:11,632: INFO: all_utils]: yaml file: params.yaml loaded sucessfully 
+[2021-10-30 21:12:11,632: INFO: all_utils]: directory is created at artifacts\tensorboard_log_dir
+[2021-10-30 21:12:11,632: INFO: all_utils]: directory is created at artifacts\checkpoint_dir
+[2021-10-30 21:12:11,632: INFO: all_utils]: directory is created at artifacts\callbacks
+[2021-10-30 21:12:11,989: INFO: callbacks]: Tensor board logs are saved at artifacts\callbacks\tensorboard_cb.cb
+[2021-10-30 21:12:11,992: INFO: callbacks]: Check point call backs are saved at artifacts\callbacks\checkpoint_cb.cb
+[2021-10-30 21:12:11,992: INFO: test]: stage three completed! callbacks are prepared and saved as binary>>>>>
+[2021-10-30 21:14:36,353: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 21:14:36,361: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-30 21:14:36,361: INFO: all_utils]: yaml file: params.yaml loaded sucessfully 
+[2021-10-30 21:14:36,361: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 21:14:36,907: INFO: models]: untrained full model is read from <keras.engine.functional.Functional object at 0x000001FEC55CCC88>
+[2021-10-30 21:14:37,022: INFO: data_management]: data augmentation is NOT used for training
+[2021-10-30 21:14:37,261: INFO: data_management]: train and valid generator is created.
+[2021-10-30 21:14:40,379: ERROR: stage_04_train]:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:50) ]] [Op:__inference_train_function_1129]
+
+Function call stack:
+train_function
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 72, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 50, in train_model
+    validation_steps=validation_steps
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 950, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 3040, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 1964, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 596, in call
+    ctx=ctx)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.InvalidArgumentError:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:50) ]] [Op:__inference_train_function_1129]
+
+Function call stack:
+train_function
+
+[2021-10-30 21:24:26,168: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 21:24:26,171: INFO: all_utils]: yaml file: config/config.yaml loaded successfully
+[2021-10-30 21:24:26,172: INFO: all_utils]: yaml file: params.yaml loaded successfully
+[2021-10-30 21:24:26,172: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 21:24:27,520: ERROR: stage_04_train]: __init__() got an unexpected keyword argument 'axis'
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 72, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 30, in train_model
+    model = load_full_model(untrained_full_model_path)
+  File "d:\datascience\aimlops\dataversioncontrol\dvc_dldemo\src\utils\models.py", line 49, in load_full_model
+    model=tf.keras.models.load_model(untrained_full_model_path)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\save.py", line 201, in load_model
+    return hdf5_format.load_model_from_hdf5(filepath, custom_objects,
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\hdf5_format.py", line 198, in load_model_from_hdf5
+    model.compile(**saving_utils.compile_args_from_training_config(
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\saving_utils.py", line 213, in compile_args_from_training_config
+    loss = _deserialize_nested_config(losses.deserialize, loss_config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\saving_utils.py", line 254, in _deserialize_nested_config
+    return deserialize_fn(config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\losses.py", line 2033, in deserialize
+    return deserialize_keras_object(
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\utils\generic_utils.py", line 675, in deserialize_keras_object
+    deserialized_obj = cls.from_config(cls_config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\losses.py", line 169, in from_config
+    return cls(**config)
+TypeError: __init__() got an unexpected keyword argument 'axis'
+[2021-10-30 21:29:18,055: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 21:29:18,058: INFO: all_utils]: yaml file: config/config.yaml loaded successfully
+[2021-10-30 21:29:18,059: INFO: all_utils]: yaml file: params.yaml loaded successfully
+[2021-10-30 21:29:18,059: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 21:29:18,325: ERROR: stage_04_train]: __init__() got an unexpected keyword argument 'axis'
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 72, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 30, in train_model
+    model = load_full_model(untrained_full_model_path)
+  File "d:\datascience\aimlops\dataversioncontrol\dvc_dldemo\src\utils\models.py", line 49, in load_full_model
+    model=tf.keras.models.load_model(untrained_full_model_path)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\save.py", line 201, in load_model
+    return hdf5_format.load_model_from_hdf5(filepath, custom_objects,
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\hdf5_format.py", line 198, in load_model_from_hdf5
+    model.compile(**saving_utils.compile_args_from_training_config(
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\saving_utils.py", line 213, in compile_args_from_training_config
+    loss = _deserialize_nested_config(losses.deserialize, loss_config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\saving_utils.py", line 254, in _deserialize_nested_config
+    return deserialize_fn(config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\losses.py", line 2033, in deserialize
+    return deserialize_keras_object(
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\utils\generic_utils.py", line 675, in deserialize_keras_object
+    deserialized_obj = cls.from_config(cls_config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\losses.py", line 169, in from_config
+    return cls(**config)
+TypeError: __init__() got an unexpected keyword argument 'axis'
+[2021-10-30 21:31:00,919: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 21:31:00,921: INFO: all_utils]: yaml file: config/config.yaml loaded successfully
+[2021-10-30 21:31:00,921: INFO: all_utils]: yaml file: params.yaml loaded successfully
+[2021-10-30 21:31:00,922: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 21:31:01,179: ERROR: stage_04_train]: __init__() got an unexpected keyword argument 'axis'
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 71, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 28, in train_model
+    model = load_full_model(untrained_full_model_path)
+  File "d:\datascience\aimlops\dataversioncontrol\dvc_dldemo\src\utils\models.py", line 49, in load_full_model
+    model=tf.keras.models.load_model(untrained_full_model_path)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\save.py", line 201, in load_model
+    return hdf5_format.load_model_from_hdf5(filepath, custom_objects,
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\hdf5_format.py", line 198, in load_model_from_hdf5
+    model.compile(**saving_utils.compile_args_from_training_config(
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\saving_utils.py", line 213, in compile_args_from_training_config
+    loss = _deserialize_nested_config(losses.deserialize, loss_config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\saving_utils.py", line 254, in _deserialize_nested_config
+    return deserialize_fn(config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\losses.py", line 2033, in deserialize
+    return deserialize_keras_object(
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\utils\generic_utils.py", line 675, in deserialize_keras_object
+    deserialized_obj = cls.from_config(cls_config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\losses.py", line 169, in from_config
+    return cls(**config)
+TypeError: __init__() got an unexpected keyword argument 'axis'
+[2021-10-30 21:31:26,359: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 21:31:26,361: INFO: all_utils]: yaml file: config/config.yaml loaded successfully
+[2021-10-30 21:31:26,361: INFO: all_utils]: yaml file: params.yaml loaded successfully
+[2021-10-30 21:31:26,361: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 21:31:26,611: ERROR: stage_04_train]: __init__() got an unexpected keyword argument 'axis'
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 71, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 28, in train_model
+    model = load_full_model(untrained_full_model_path)
+  File "d:\datascience\aimlops\dataversioncontrol\dvc_dldemo\src\utils\models.py", line 49, in load_full_model
+    model=tf.keras.models.load_model(untrained_full_model_path)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\save.py", line 201, in load_model
+    return hdf5_format.load_model_from_hdf5(filepath, custom_objects,
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\hdf5_format.py", line 198, in load_model_from_hdf5
+    model.compile(**saving_utils.compile_args_from_training_config(
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\saving_utils.py", line 213, in compile_args_from_training_config
+    loss = _deserialize_nested_config(losses.deserialize, loss_config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\saving_utils.py", line 254, in _deserialize_nested_config
+    return deserialize_fn(config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\losses.py", line 2033, in deserialize
+    return deserialize_keras_object(
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\utils\generic_utils.py", line 675, in deserialize_keras_object
+    deserialized_obj = cls.from_config(cls_config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\losses.py", line 169, in from_config
+    return cls(**config)
+TypeError: __init__() got an unexpected keyword argument 'axis'
+[2021-10-30 21:33:46,187: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 21:33:46,189: INFO: all_utils]: yaml file: config/config.yaml loaded successfully
+[2021-10-30 21:33:46,190: INFO: all_utils]: yaml file: params.yaml loaded successfully
+[2021-10-30 21:33:46,190: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 21:33:46,190: INFO: stage_04_train]: artifacts\base_model\updated_VGG16_base_model.h5
+[2021-10-30 21:33:46,433: ERROR: stage_04_train]: __init__() got an unexpected keyword argument 'axis'
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 72, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 29, in train_model
+    model = load_full_model(untrained_full_model_path)
+  File "d:\datascience\aimlops\dataversioncontrol\dvc_dldemo\src\utils\models.py", line 49, in load_full_model
+    model=tf.keras.models.load_model(untrained_full_model_path)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\save.py", line 201, in load_model
+    return hdf5_format.load_model_from_hdf5(filepath, custom_objects,
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\hdf5_format.py", line 198, in load_model_from_hdf5
+    model.compile(**saving_utils.compile_args_from_training_config(
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\saving_utils.py", line 213, in compile_args_from_training_config
+    loss = _deserialize_nested_config(losses.deserialize, loss_config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\saving\saving_utils.py", line 254, in _deserialize_nested_config
+    return deserialize_fn(config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\losses.py", line 2033, in deserialize
+    return deserialize_keras_object(
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\utils\generic_utils.py", line 675, in deserialize_keras_object
+    deserialized_obj = cls.from_config(cls_config)
+  File "C:\Users\prema\AppData\Roaming\Python\Python38\site-packages\tensorflow\python\keras\losses.py", line 169, in from_config
+    return cls(**config)
+TypeError: __init__() got an unexpected keyword argument 'axis'
+[2021-10-30 21:50:51,726: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 21:50:51,729: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-30 21:50:51,729: INFO: all_utils]: yaml file: params.yaml loaded sucessfully 
+[2021-10-30 21:50:51,729: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 21:50:51,730: INFO: stage_04_train]: artifacts\base_model\updated_VGG16_base_model.h5
+[2021-10-30 21:50:52,399: INFO: models]: untrained full model is read from <keras.engine.functional.Functional object at 0x0000013C4AA2A048>
+[2021-10-30 21:50:52,411: INFO: callbacks]: saved callbacks are loaded from artifacts\callbacks
+[2021-10-30 21:50:52,533: INFO: data_management]: data augmentation is NOT used for training
+[2021-10-30 21:50:52,658: INFO: data_management]: train and valid generator is created.
+[2021-10-30 21:50:55,963: ERROR: stage_04_train]:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:50) ]] [Op:__inference_train_function_1143]
+
+Function call stack:
+train_function
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 72, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 50, in train_model
+    callbacks=callbacks
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 950, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 3040, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 1964, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 596, in call
+    ctx=ctx)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.InvalidArgumentError:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:50) ]] [Op:__inference_train_function_1143]
+
+Function call stack:
+train_function
+
+[2021-10-30 22:06:11,651: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 22:06:11,652: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-30 22:06:11,653: INFO: all_utils]: yaml file: params.yaml loaded sucessfully 
+[2021-10-30 22:06:11,653: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 22:06:11,653: INFO: stage_04_train]: artifacts\base_model\updated_VGG16_base_model.h5
+[2021-10-30 22:06:12,152: INFO: models]: untrained full model is read from <keras.engine.functional.Functional object at 0x000002911302CC88>
+[2021-10-30 22:06:12,153: INFO: callbacks]: saved callbacks are loaded from artifacts\callbacks
+[2021-10-30 22:06:12,275: INFO: data_management]: data augmentation is NOT used for training
+[2021-10-30 22:06:12,400: INFO: data_management]: train and valid generator is created.
+[2021-10-30 22:06:15,221: ERROR: stage_04_train]:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:50) ]] [Op:__inference_train_function_1143]
+
+Function call stack:
+train_function
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 72, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 50, in train_model
+    callbacks=callbacks
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 950, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 3040, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 1964, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 596, in call
+    ctx=ctx)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.InvalidArgumentError:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:50) ]] [Op:__inference_train_function_1143]
+
+Function call stack:
+train_function
+
+[2021-10-30 22:16:02,405: INFO: stage_04_train]: >>>>> stage four started
+[2021-10-30 22:16:02,407: INFO: all_utils]: yaml file: config/config.yaml loaded sucessfully 
+[2021-10-30 22:16:02,414: INFO: all_utils]: yaml file: params.yaml loaded sucessfully 
+[2021-10-30 22:16:02,414: INFO: all_utils]: directory is created at artifacts\model
+[2021-10-30 22:16:02,414: INFO: stage_04_train]: artifacts\base_model\updated_VGG16_base_model.h5
+[2021-10-30 22:16:02,908: INFO: models]: untrained full model is read from <keras.engine.functional.Functional object at 0x000001F5639DCC88>
+[2021-10-30 22:16:02,909: INFO: callbacks]: saved callbacks are loaded from artifacts\callbacks
+[2021-10-30 22:16:03,035: INFO: data_management]: data augmentation is NOT used for training
+[2021-10-30 22:16:03,161: INFO: data_management]: train and valid generator is created.
+[2021-10-30 22:16:06,315: ERROR: stage_04_train]:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:50) ]] [Op:__inference_train_function_1143]
+
+Function call stack:
+train_function
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 72, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 50, in train_model
+    callbacks=callbacks
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\def_function.py", line 950, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 3040, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 1964, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\function.py", line 596, in call
+    ctx=ctx)
+  File "C:\Users\prema\anaconda3\envs\flower_pred\lib\site-packages\tensorflow\python\eager\execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.InvalidArgumentError:  logits and labels must be broadcastable: logits_size=[16,2] labels_size=[16,5]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at src/stage_04_train.py:50) ]] [Op:__inference_train_function_1143]
+
+Function call stack:
+train_function
+
